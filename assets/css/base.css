@@ -49,6 +49,7 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   font-weight:800;
   line-height:1.05;
   letter-spacing:.5px;
+  font-size:clamp(1.9rem, 3.8vw, 2.8rem);
   -webkit-text-stroke:2.5px #fff;
   paint-order:stroke fill;
   text-shadow: 0 6px 0 rgba(55,51,50,.12);

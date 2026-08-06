@@ -20,6 +20,11 @@ header.scrolled{
   display:flex; align-items:center; justify-content:space-between;
 }
 .logo-lockup{display:flex; align-items:center; gap:12px; color:#fff;}
+.logo-mark-full{
+  height:4px; width:auto; flex-shrink:0;
+  transition:height .35s ease;
+}
+header.scrolled .logo-mark-full{height:36px;}
 .logo-mark{
   width:46px; height:46px; flex-shrink:0;
   transition:width .35s ease, height .35s ease;
@@ -99,7 +104,9 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
   position:absolute; inset:0; z-index:0;
   background:
     linear-gradient(160deg, rgba(13,63,107,.72), rgba(27,162,221,.55)),
-    repeating-linear-gradient(135deg, #7a4a35 0 26px, #8a5640 26px 52px);
+    url("../img/estrutura/Patio Aberto.png");
+  background-size:cover;
+  background-position:center;
   will-change:transform;
 }
 .hero-bg .ph-icon{opacity:.35;}
@@ -108,7 +115,7 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
 
 .hero-eyebrow{color:#fff; font-family:var(--font-marker); font-size:1.2rem; transform:rotate(-2deg); display:inline-block; margin-bottom:10px;}
-.hero .sticker-title{font-size:clamp(2.1rem, 5vw, 3.6rem);}
+.hero .sticker-title{font-size:clamp(2.4rem, 5.5vw, 4rem);}
 .hero-sub{color:#fff; font-weight:700; font-size:1.15rem; max-width:520px; margin:22px 0 30px; opacity:.95;}
 .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
 
@@ -311,7 +318,14 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 .logo-chip:hover{transform:translateY(-4px);}
 .rede-block{background:var(--azul-marinho); color:#fff; margin-top:0;}
 .rede-block .section-title, .rede-block p{color:#fff;}
-.rede-block .logo-chip{background:rgba(255,255,255,.1); color:#fff; border-color:rgba(255,255,255,.35);}
+.rede-block .logo-chip{background:#fff; border:none; width:220px; height:120px; padding:16px; box-shadow:0 10px 26px rgba(0,0,0,.18);}
+
+/* ============ CARROSSEL DE PARCEIROS (sem fundo, rolagem contínua) ============ */
+.partner-marquee{ overflow:hidden; position:relative; width:100%; -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.partner-track{ display:flex; gap:64px; align-items:center; width:max-content; animation:partnerScroll 24s linear infinite; }
+.partner-track img{ height:72px; width:auto; max-width:200px; object-fit:contain; flex-shrink:0; }
+@keyframes partnerScroll{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+@media (prefers-reduced-motion: reduce){ .partner-track{animation:none; flex-wrap:wrap; justify-content:center;} }
 
 /* ============ DEPOIMENTOS / CARROSSEL ============ */
 .depoimentos{background:#fff; position:relative; overflow:hidden;}
