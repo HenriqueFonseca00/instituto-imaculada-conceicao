@@ -1,0 +1,93 @@
+/* =========================================================
+   BASE — tokens de marca, reset, tipografia, helpers globais
+   ========================================================= */
+
+/* ============ TOKENS ============ */
+:root{
+  --azul-marinho:#1664AB;
+  --azul-vivo:#1BA2DD;
+  --vermelho:#E73B3F;
+  --grafite:#373332;
+  --branco:#FFFFFF;
+  --dourado:#EF9F27;
+  --font-title:'Baloo 2', sans-serif;
+  --font-body:'Nunito', sans-serif;
+  --font-script:'Caveat', cursive;
+  --font-marker:'Kalam', cursive;
+  --header-h: 96px;
+  --header-h-scrolled: 66px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 14px 34px rgba(22,100,171,.18);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  color:var(--grafite);
+  background:var(--branco);
+  overflow-x:hidden;
+  font-weight:700;
+  line-height:1.5;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+
+/* skip link */
+.skip-link{position:absolute; left:-999px; top:0; background:var(--vermelho); color:#fff; padding:12px 20px; z-index:9999; border-radius:0 0 10px 0; font-family:var(--font-title);}
+.skip-link:focus{left:0;}
+
+:focus-visible{outline:3px solid var(--dourado); outline-offset:3px;}
+
+/* ============ TYPE HELPERS ============ */
+.sticker-title{
+  font-family:var(--font-title);
+  text-transform:uppercase;
+  font-weight:800;
+  line-height:1.05;
+  letter-spacing:.5px;
+  -webkit-text-stroke:2.5px #fff;
+  paint-order:stroke fill;
+  text-shadow: 0 6px 0 rgba(55,51,50,.12);
+}
+.sticker-title span{display:block;}
+.sticker-title .c-marinho{color:var(--azul-marinho);}
+.sticker-title .c-vivo{color:var(--azul-vivo);}
+.sticker-title .c-vermelho{color:var(--vermelho);}
+.sticker-title .c-grafite{color:var(--grafite);}
+
+.eyebrow{
+  display:inline-block;
+  font-family:var(--font-marker);
+  font-size:1.15rem;
+  color:var(--vermelho);
+  transform:rotate(-3deg);
+  margin-bottom:6px;
+}
+
+.script-tag{
+  font-family:var(--font-script);
+  font-weight:700;
+  font-size:1.6rem;
+  color:var(--azul-marinho);
+}
+.script-tag.red{color:var(--vermelho);}
+
+.keyword{color:var(--azul-marinho); font-weight:800;}
+.keyword.red{color:var(--vermelho);}
+
+.section-pad{padding:96px 0;}
+@media (max-width:768px){.section-pad{padding:64px 0;}}
+
+/* ============ SECTION HELPERS ============ */
+.section-head{max-width:640px; margin:0 auto 50px; text-align:center; position:relative; z-index:1;}
+.section-head.left{text-align:left; margin:0 0 46px;}
+
+/* doodle texture (very subtle) */
+.doodle-bg{
+  background-image:radial-gradient(circle at 20% 20%, rgba(22,100,171,.05) 0, transparent 40%),
+                    radial-gradient(circle at 80% 70%, rgba(231,59,63,.05) 0, transparent 40%);
+}

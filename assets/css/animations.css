@@ -1,0 +1,13 @@
+/* =========================================================
+   ANIMATIONS — reveal on scroll e preferências de movimento
+   ========================================================= */
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0; transform:translateY(36px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+.reveal-delay-1.in-view{transition-delay:.1s;}
+.reveal-delay-2.in-view{transition-delay:.2s;}
+.reveal-delay-3.in-view{transition-delay:.3s;}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1; transform:none; transition:none;}
+}

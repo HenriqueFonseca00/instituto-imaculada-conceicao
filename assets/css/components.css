@@ -1,0 +1,159 @@
+/* =========================================================
+   COMPONENTS — peças reutilizáveis de UI (badges, formulário,
+   FAQ, botão flutuante do WhatsApp, elementos decorativos)
+   ========================================================= */
+
+/* ============ DIAGONAL BANNER ============ */
+.diagonal-banner{
+  position:relative;
+  display:inline-block;
+  padding:10px 34px;
+  color:#fff;
+  font-family:var(--font-title);
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:1px;
+  background:var(--vermelho);
+  transform:skewX(-8deg) rotate(-2deg);
+  box-shadow:0 10px 0 -4px rgba(0,0,0,.08);
+}
+.diagonal-banner span{display:inline-block; transform:skewX(8deg) rotate(2deg);}
+.diagonal-banner.blue{background:var(--azul-marinho);}
+.diagonal-banner.lightblue{background:var(--azul-vivo);}
+
+/* ============ SPEECH BUBBLE BADGE ============ */
+.bubble{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#fff;
+  color:var(--vermelho);
+  font-family:var(--font-title);
+  font-weight:700;
+  text-transform:uppercase;
+  font-size:.85rem;
+  padding:12px 22px;
+  border-radius:999px;
+  border:3px solid var(--vermelho);
+  box-shadow:var(--shadow-soft);
+}
+.bubble::after{
+  content:"";
+  position:absolute;
+  bottom:-14px; left:34px;
+  width:0; height:0;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-top:14px solid var(--vermelho);
+}
+.bubble::before{
+  content:"";
+  position:absolute;
+  bottom:-9px; left:37px;
+  width:0; height:0;
+  border-left:7px solid transparent;
+  border-right:7px solid transparent;
+  border-top:11px solid #fff;
+  z-index:1;
+}
+.bubble.pulse{animation:pulseBadge 2.4s ease-in-out infinite;}
+@keyframes pulseBadge{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.045);}
+}
+
+/* ============ BLOBS ============ */
+.blob{
+  position:absolute;
+  border-radius:58% 42% 62% 38% / 44% 58% 42% 56%;
+  opacity:.16;
+  z-index:0;
+  animation:floatBlob 9s ease-in-out infinite;
+  pointer-events:none;
+}
+.blob.red{background:var(--vermelho);}
+.blob.blue{background:var(--azul-vivo);}
+@keyframes floatBlob{
+  0%,100%{transform:translate(0,0) rotate(0deg);}
+  50%{transform:translate(14px,-22px) rotate(8deg);}
+}
+@media (prefers-reduced-motion: reduce){
+  .blob{animation:none;}
+}
+
+/* ============ WAVE DIVIDER ============ */
+.wave{width:100%; display:block; line-height:0;}
+.wave svg{width:100%; height:80px; display:block;}
+@media (max-width:768px){.wave svg{height:48px;}}
+
+/* ============ FORMULÁRIO - AGENDE SUA VISITA ============ */
+.lead-form-section{background:#F7FAFD; position:relative; overflow:hidden;}
+.lead-form-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:50px; align-items:center; position:relative; z-index:1;}
+@media (max-width:900px){.lead-form-grid{grid-template-columns:1fr;}}
+.lead-form-side .bubble{margin-bottom:14px;}
+.lead-form-side ul{margin-top:22px; display:flex; flex-direction:column; gap:12px;}
+.lead-form-side li{display:flex; align-items:center; gap:10px; font-size:.95rem;}
+.lead-form-side li svg{flex-shrink:0; width:22px; height:22px;}
+.lead-form-card{
+  background:#fff; border-radius:var(--radius-lg); padding:36px;
+  box-shadow:var(--shadow-soft); border-top:6px solid var(--vermelho);
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+@media (max-width:520px){.form-row{grid-template-columns:1fr;}}
+.field{margin-bottom:18px;}
+.field label{display:block; font-family:var(--font-title); font-size:.78rem; text-transform:uppercase; letter-spacing:.4px; color:var(--azul-marinho); margin-bottom:6px;}
+.field input, .field select{
+  width:100%; padding:13px 14px; border-radius:12px; border:2px solid #dde8f2;
+  font-family:var(--font-body); font-weight:700; font-size:.95rem; color:var(--grafite);
+  background:#fbfdff; transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field input:focus, .field select:focus{border-color:var(--azul-vivo); box-shadow:0 0 0 3px rgba(27,162,221,.18); outline:none;}
+.field-check{display:flex; align-items:flex-start; gap:10px; font-size:.82rem; color:#5b5654; margin-bottom:22px;}
+.field-check input{width:18px; height:18px; margin-top:2px; accent-color:var(--vermelho);}
+.field-check a{color:var(--azul-marinho); text-decoration:underline;}
+.form-submit-btn{width:100%; justify-content:center; font-size:1rem; padding:16px;}
+.form-note{text-align:center; font-size:.78rem; color:#8a8582; margin-top:12px;}
+.form-success{
+  display:none; text-align:center; padding:20px 10px;
+}
+.form-success.show{display:block;}
+.form-success .check-circle{
+  width:64px; height:64px; border-radius:50%; background:#e8f9ee; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;
+}
+.form-success h3{font-family:var(--font-title); color:var(--azul-marinho); text-transform:uppercase; margin-bottom:8px;}
+.form-success p{color:var(--grafite); font-size:.95rem;}
+
+/* ============ FAQ ============ */
+.faq{background:#fff;}
+.faq-list{max-width:760px; margin:0 auto;}
+.faq-item{
+  border-bottom:2px solid #eef3f8;
+}
+.faq-question{
+  width:100%; text-align:left; display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:22px 4px; font-family:var(--font-title); text-transform:uppercase; font-size:.95rem; color:var(--azul-marinho);
+}
+.faq-question .icon{
+  flex-shrink:0; width:30px; height:30px; border-radius:50%; background:#F4F8FC; color:var(--azul-marinho);
+  display:flex; align-items:center; justify-content:center; font-size:1.2rem; font-weight:800; transition:transform .3s ease, background .3s ease;
+}
+.faq-item.open .faq-question .icon{transform:rotate(45deg); background:var(--vermelho); color:#fff;}
+.faq-answer{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+.faq-answer p{padding:0 4px 22px; font-size:.94rem; color:var(--grafite); max-width:680px;}
+
+/* ============ WHATSAPP FLOAT ============ */
+.wa-float{
+  position:fixed; bottom:26px; right:26px; z-index:1300;
+  width:64px; height:64px; border-radius:50%;
+  background:#25D366;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 26px rgba(37,211,102,.5);
+  animation:breathe 2.6s ease-in-out infinite;
+}
+.wa-float svg{width:32px; height:32px;}
+@keyframes breathe{
+  0%,100%{transform:scale(1); box-shadow:0 10px 26px rgba(37,211,102,.5);}
+  50%{transform:scale(1.08); box-shadow:0 14px 34px rgba(37,211,102,.7);}
+}
+@media (prefers-reduced-motion: reduce){.wa-float{animation:none;}}
