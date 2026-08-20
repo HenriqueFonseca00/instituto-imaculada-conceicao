@@ -21,10 +21,10 @@ header.scrolled{
 }
 .logo-lockup{display:flex; align-items:center; gap:12px; color:#fff;}
 .logo-mark-full{
-  height:54px; width:auto; flex-shrink:0;
+  height:4px; width:auto; flex-shrink:0;
   transition:height .35s ease;
 }
-header.scrolled .logo-mark-full{height:38px;}
+header.scrolled .logo-mark-full{height:36px;}
 .logo-mark{
   width:46px; height:46px; flex-shrink:0;
   transition:width .35s ease, height .35s ease;
@@ -102,31 +102,17 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 }
 .hero-bg{
   position:absolute; inset:0; z-index:0;
-  overflow:hidden;
+  background:
+    linear-gradient(160deg, rgba(13,63,107,.72), rgba(27,162,221,.55)),
+    url("../img/estrutura/Patio Aberto.png");
+  background-size:cover;
+  background-position:center;
   will-change:transform;
-}
-.hero-bg-slide{
-  position:absolute; inset:0; width:100%; height:100%;
-  object-fit:cover; opacity:0; z-index:0;
-  transition:opacity 1.8s ease;
-}
-.hero-bg-slide.active{opacity:1; z-index:1;}
-.hero-bg-overlay{
-  position:absolute; inset:0; z-index:2;
-  background:linear-gradient(160deg, rgba(13,63,107,.72), rgba(27,162,221,.55));
 }
 .hero-bg .ph-icon{opacity:.35;}
 .hero-content{position:relative; z-index:2; width:100%; padding:60px 0 90px;}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center;}
-.hero-grid.hero-grid-solo{grid-template-columns:1fr; max-width:680px;}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
-
-/* ============ VEM VER DE PERTO (entre hero e história) ============ */
-.vemver-strip{background:#fff; text-align:center; padding:26px 0 0; position:relative; z-index:1;}
-.vemver-tag{
-  font-family:var(--font-marker); font-size:1.3rem; color:var(--azul-marinho);
-  display:inline-block; transform:rotate(-2deg);
-}
 
 .hero-eyebrow{color:#fff; font-family:var(--font-marker); font-size:1.2rem; transform:rotate(-2deg); display:inline-block; margin-bottom:10px;}
 .hero .sticker-title{font-size:clamp(2.4rem, 5.5vw, 4rem);}
@@ -206,22 +192,6 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 .valor-pill.red{border-color:var(--vermelho); color:var(--vermelho); background:#FEF3F3;}
 .valor-pill.gold{border-color:var(--dourado); color:#a5680f; background:#FEF7EA;}
 
-/* ============ PILHA DE FOTOS — NOSSA HISTÓRIA ============ */
-.photo-stack{position:relative; width:300px; height:340px; max-width:100%;}
-.stack-photo{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  border-radius:16px; border:6px solid #fff; box-shadow:var(--shadow-soft);
-  opacity:0; z-index:1; transform:rotate(-3deg) scale(.92);
-  transition:opacity 1s ease, transform 1s ease, z-index 0s;
-}
-.stack-photo:nth-child(2){transform:rotate(3deg) scale(.92);}
-.stack-photo:nth-child(3){transform:rotate(-2deg) scale(.92);}
-.stack-photo:nth-child(4){transform:rotate(4deg) scale(.92);}
-.stack-photo:nth-child(5){transform:rotate(-4deg) scale(.92);}
-.stack-photo:nth-child(6){transform:rotate(2deg) scale(.92);}
-.stack-photo.active{opacity:1; z-index:5; transform:rotate(-1.5deg) scale(1);}
-@media (max-width:480px){.photo-stack{width:240px; height:280px;}}
-
 /* ============ COUNTERS ============ */
 .counters{
   background:var(--azul-marinho);
@@ -276,17 +246,28 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 /* ============ ESTRUTURA / GALERIA ============ */
 .estrutura{background:#F7FAFD;}
 .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:160px; gap:16px;}
-.gallery-grid > div:nth-child(1){grid-column:span 2; grid-row:span 2;}
-.gallery-grid > div{border-radius:18px; overflow:hidden;}
-.gallery-grid > div img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease;}
-.gallery-grid > div:hover img{transform:scale(1.06);}
+.gallery-grid .ph:nth-child(1){grid-column:span 2; grid-row:span 2;}
+.gallery-grid .ph{border-radius:18px; overflow:hidden;}
 @media (max-width:860px){
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
-  .gallery-grid > div:nth-child(1){grid-column:span 2; grid-row:span 1; min-height:220px;}
+  .gallery-grid .ph:nth-child(1){grid-column:span 2; grid-row:span 1; min-height:220px;}
 }
 
 /* ============ PROVA SOCIAL / RESULTADOS ============ */
 .prova-social{background:#fff;}
+.prova-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;}
+@media (max-width:900px){.prova-grid{grid-template-columns:1fr;}}
+.video-frame{
+  position:relative; border-radius:var(--radius-lg); overflow:hidden;
+  border:5px solid #fff; box-shadow:var(--shadow-soft); aspect-ratio:16/10;
+}
+.play-btn{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:74px; height:74px; border-radius:50%; background:rgba(255,255,255,.92);
+  display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px rgba(0,0,0,.25);
+  transition:transform .25s ease;
+}
+.video-frame:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);}
 .stat-badges{display:flex; flex-wrap:wrap; gap:16px; margin-top:26px;}
 .stat-badge{
   background:#F4F8FC; border:2px solid var(--azul-vivo); border-radius:18px;
@@ -298,6 +279,12 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 .stat-badge.red .n{color:var(--vermelho);}
 .stat-badge.gold{border-color:var(--dourado); background:#FEF7EA;}
 .stat-badge.gold .n{color:#a5680f;}
+.selos-row{display:flex; gap:16px; flex-wrap:wrap; margin-top:24px; align-items:center;}
+.selo-circ{
+  width:74px; height:74px; border-radius:50%; background:#fff; border:3px dashed var(--dourado);
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  font-family:var(--font-title); font-size:.6rem; color:var(--azul-marinho); padding:6px; text-transform:uppercase;
+}
 
 /* ============ ÚLTIMOS EVENTOS ============ */
 .eventos{background:#F7FAFD;}

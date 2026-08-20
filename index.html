@@ -56,17 +56,11 @@
 <main id="main">
 <!-- ============ HERO ============ -->
 <section class="hero" id="topo">
-  <div class="hero-bg" id="heroBg">
-    <img src="assets/img/hero/hero-01.jpg" class="hero-bg-slide active" alt="Fachada principal do Instituto Imaculada Conceição">
-    <img src="assets/img/hero/hero-02.jpg" class="hero-bg-slide" alt="Vista do Instituto Imaculada Conceição">
-    <img src="assets/img/hero/hero-03.jpg" class="hero-bg-slide" alt="Pátio com vista do prédio da congregação">
-    <img src="assets/img/hero/hero-04.jpg" class="hero-bg-slide" alt="Vista aérea da quadra semicoberta">
-    <img src="assets/img/hero/hero-05.jpg" class="hero-bg-slide" alt="Prédio do Instituto Imaculada Conceição">
-    <div class="hero-bg-overlay" aria-hidden="true"></div>
-  </div>
+  <div class="hero-bg" id="heroBg"></div>
   <div class="wrap hero-content">
-    <div class="hero-grid hero-grid-solo">
+    <div class="hero-grid">
       <div>
+        <span class="hero-eyebrow">vem ver de perto...</span>
         <h1 class="sticker-title">
           <span class="c-vermelho">Venha conhecer</span>
           <span class="c-vivo">de perto</span>
@@ -81,6 +75,15 @@
           <a href="#sobre" class="btn btn-outline">Conheça nossa história</a>
         </div>
       </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" style="overflow:hidden;">
+          <img src="assets/img/estrutura/Fachada Principal escola.png" alt="Fachada principal do Instituto Imaculada Conceição" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <svg class="hand-arrow" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <path d="M8 12c10 30 20 55 55 70" stroke="#111" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          <path d="M50 74l14 8-3-16" stroke="#111" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
   </div>
   <div class="hero-badge-105" aria-hidden="true" style="background:transparent; border:none; padding:0; box-shadow:none; display:flex; align-items:center; justify-content:center;">
@@ -89,11 +92,6 @@
   <div class="blob red" style="width:220px; height:220px; top:8%; left:-60px;"></div>
   <div class="blob blue" style="width:180px; height:180px; bottom:6%; right:6%;"></div>
 </section>
-
-<!-- ============ VEM VER DE PERTO ============ -->
-<div class="vemver-strip">
-  <span class="vemver-tag">vem ver de perto...</span>
-</div>
 
 <!-- ============ SOBRE / NOSSA HISTÓRIA ============ -->
 <section class="sobre section-pad" id="sobre">
@@ -120,14 +118,12 @@
       <p class="script-tag" style="display:block; margin-top:24px;">Educação que Transforma</p>
     </div>
   </div>
-  <div class="wrap reveal reveal-delay-2" style="margin-top:56px; position:relative; z-index:1; display:flex; justify-content:center;">
-    <div class="photo-stack" id="historiaStack">
-      <img src="assets/img/historia/historia-01.jpg" class="stack-photo active" alt="As Irmãs da congregação">
-      <img src="assets/img/historia/historia-02.jpg" class="stack-photo" alt="Professores em roda">
-      <img src="assets/img/historia/historia-03.jpg" class="stack-photo" alt="Quiosques do colégio">
-      <img src="assets/img/historia/historia-04.jpg" class="stack-photo" alt="Corredor da coordenação">
-      <img src="assets/img/historia/historia-05.jpg" class="stack-photo" alt="Bancos do pátio">
-      <img src="assets/img/historia/historia-06.jpg" class="stack-photo" alt="Prédio histórico do colégio">
+  <div class="wrap reveal reveal-delay-2" style="margin-top:56px; position:relative; z-index:1;">
+    <div style="display:flex; gap:18px; flex-wrap:wrap; justify-content:center;">
+      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(-2deg);"><img src="assets/img/estrutura/irmas atuais colegio.png" alt="As Irmãs da congregação" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(1.5deg);"><img src="assets/img/estrutura/Professores em roda.png" alt="Professores em roda" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(-1deg);"><img src="assets/img/estrutura/Quiosques-colegio.png" alt="Quiosques do colégio" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(2deg);"><img src="assets/img/estrutura/quadra aberta.png" alt="Quadra aberta" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
     </div>
   </div>
 </section>
@@ -266,43 +262,34 @@
       </h2>
     </div>
     <div class="gallery-grid reveal">
-      <div><img src="assets/img/estrutura/Fachada atual - casa irmas.png" alt="Fachada atual da casa das Irmãs" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/quadra coberta.png" alt="Pátio coberto e quadra" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/Sala de aula - ensino medio.png" alt="Salas de aula do Ensino Médio" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/capela colegio.png" alt="Capela do colégio" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/Parquinho educacao infantil.png" alt="Parquinho da Educação Infantil" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/Patio Aberto.png" alt="Pátio aberto" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/quadra aberta.png" alt="Quadra aberta" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/Quiosques-colegio.png" alt="Quiosques do colégio" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/lab-ciencias-1.jpg" alt="Laboratório de ciências" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/lab-ciencias-2.jpg" alt="Laboratório de ciências — outra vista" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/sala-artes.jpg" alt="Sala de artes" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/sala-liv.jpg" alt="Sala L.I.V. — socioemocional" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/corredor-quiosques.jpg" alt="Corredor dos quiosques" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/corredores-lab.jpg" alt="Corredores abertos dos laboratórios" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/bercario-dormitorio.jpg" alt="Dormitório do berçário" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/bercario-sala.jpg" alt="Sala principal do berçário" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/corredor-em.jpg" alt="Corredor do Ensino Médio" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/patio-cantina.jpg" alt="Pátio aberto com vista da cantina" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/cantina-externa.jpg" alt="Vista externa da cantina" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/outdoor-aluno.jpg" alt="Área externa dos alunos" loading="lazy"></div>
-      <div><img src="assets/img/estrutura/pelucias-liv.jpg" alt="Pelúcias do projeto L.I.V." loading="lazy"></div>
-      <div><img src="assets/img/estrutura/predio-quiosques.jpg" alt="Prédio da congregação com vista dos quiosques" loading="lazy"></div>
+      <div style="border-radius:18px; overflow:hidden;"><img src="assets/img/estrutura/quadra coberta.png" alt="Pátio coberto e quadra" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+      <div style="border-radius:18px; overflow:hidden;"><img src="assets/img/estrutura/Sala de aula - ensino medio.png" alt="Salas de aula" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+      <div style="border-radius:18px; overflow:hidden;"><img src="assets/img/estrutura/capela colegio.png" alt="Capela do colégio" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+      <div class="ph graphite" role="img" aria-label="Foto de biblioteca ou espaço de leitura"><svg viewBox="0 0 24 24" fill="#fff"><path d="M4 4h6v16H4zM14 4h6v16h-6z"/></svg><span>Biblioteca</span></div>
+      <div style="border-radius:18px; overflow:hidden;"><img src="assets/img/estrutura/Parquinho educacao infantil.png" alt="Vida escolar" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
     </div>
   </div>
 </section>
 
 <!-- ============ PROVA SOCIAL / RESULTADOS ============ -->
 <section class="prova-social section-pad">
-  <div class="wrap">
-    <div class="reveal" style="max-width:680px; margin:0 auto; text-align:center;">
+  <div class="wrap prova-grid">
+    <div class="reveal">
+      <div class="video-frame ph graphite" role="img" aria-label="Vídeo institucional curto com cenas reais da escola">
+        <span>VÍDEO — Tour institucional (30–60s)</span>
+        <div class="play-btn" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#E73B3F"><path d="M8 5v14l11-7L8 5Z"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
       <span class="eyebrow">números que contam nossa história</span>
       <h2 class="sticker-title" style="font-size:clamp(1.8rem,3.4vw,2.6rem);">
         <span class="c-marinho">Resultados que</span>
         <span class="c-vermelho">a gente comprova</span>
       </h2>
-      <p style="margin:12px auto 0;">Não é só tradição — é resultado. Alguns números que mostram o compromisso do Instituto com a formação dos nossos alunos.</p>
-      <div class="stat-badges" style="justify-content:center;">
+      <p style="margin-top:12px; max-width:480px;">Não é só tradição — é resultado. Alguns números que mostram o compromisso do Instituto com a formação dos nossos alunos.</p>
+      <div class="stat-badges">
         <div class="stat-badge">
           <span class="n">92%</span>
           <span class="l">Aprovação em vestibulares</span>
@@ -316,7 +303,12 @@
           <span class="l">Anos de tradição beneditina</span>
         </div>
       </div>
-      <p style="font-size:.76rem; color:#8a8582; margin-top:14px;">*Números ilustrativos — substituir pelos dados reais da escola.</p>
+      <div class="selos-row" aria-label="Selos e certificações">
+        <div class="selo-circ">Selo de<br>Qualidade</div>
+        <div class="selo-circ">Certificação<br>MEC</div>
+        <div class="selo-circ">Escola<br>Beneditina</div>
+      </div>
+      <p style="font-size:.76rem; color:#8a8582; margin-top:14px;">*Números e selos ilustrativos — substituir pelos dados reais da escola.</p>
     </div>
   </div>
 </section>
