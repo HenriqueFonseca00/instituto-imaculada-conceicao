@@ -5,6 +5,7 @@ import { initReveal } from './reveal.js';
 import { initFaq } from './faq.js';
 import { initCarousel } from './carousel.js';
 import { initForm } from './form.js';
+import { initHistoryDeck } from './historyDeck.js';
 
 initHeader();
 initParallax();
@@ -12,3 +13,4 @@ initReveal();
 initFaq();
 initCarousel();
 initForm();
+initHistoryDeck();

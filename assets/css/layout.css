@@ -112,7 +112,11 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 .hero-bg .ph-icon{opacity:.35;}
 .hero-content{position:relative; z-index:2; width:100%; padding:60px 0 90px;}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center;}
-@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+@media (max-width:900px){
+  .hero{min-height:auto; padding-bottom:20px;}
+  .hero-content{padding:40px 0 50px;}
+  .hero-grid{grid-template-columns:1fr;}
+}
 
 .hero-eyebrow{color:#fff; font-family:var(--font-marker); font-size:1.2rem; transform:rotate(-2deg); display:inline-block; margin-bottom:10px;}
 .hero .sticker-title{font-size:clamp(2.4rem, 5.5vw, 4rem);}
@@ -130,8 +134,10 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 .hero-badge-105 .num{font-family:var(--font-title); font-size:2.1rem; color:var(--azul-marinho); font-weight:800; line-height:1;}
 .hero-badge-105 .lbl{font-family:var(--font-script); color:var(--vermelho); font-size:1rem;}
 @media (max-width:900px){.hero-badge-105{position:static; margin:20px auto 0; transform:rotate(4deg);}}
+@media (max-width:520px){.hero-badge-105{width:96px; height:96px;}}
 
 .hero-photo-wrap{position:relative;}
+@media (max-width:900px){.hero-photo-wrap{max-width:340px; margin:28px auto 0;}}
 .hero-photo{
   border-radius:var(--radius-lg);
   overflow:hidden;
@@ -184,6 +190,16 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
 @media (max-width:900px){.sobre-grid{grid-template-columns:1fr;}}
 .sobre-photo{border-radius:var(--radius-lg); overflow:hidden; border:5px solid #fff; box-shadow:var(--shadow-soft); transform:rotate(-1.5deg);}
 .sobre-text p{margin:16px 0; font-size:1.02rem;}
+
+/* ============ PILHA DE FOTOS — foto histórica + 4 fotos girando atrás ============ */
+.photo-deck-wrap{padding-top:52px; display:flex; justify-content:center;}
+@media (max-width:900px){.photo-deck-wrap{justify-content:center; padding-top:60px;}}
+.photo-deck{position:relative; width:100%; max-width:420px; aspect-ratio:4/3; overflow:visible;}
+.deck-photo{
+  position:absolute; left:50%; top:0; width:100%; height:100%;
+  object-fit:cover; border-radius:var(--radius-lg); border:5px solid #fff; box-shadow:var(--shadow-soft);
+  transition:top 1s ease, transform 1s ease, opacity .8s ease;
+}
 .valores{display:flex; gap:16px; flex-wrap:wrap; margin-top:26px;}
 .valor-pill{
   background:#F4F8FC; border:2px solid var(--azul-vivo); color:var(--azul-marinho);
@@ -288,6 +304,20 @@ nav.main-nav a:hover::after, nav.main-nav a:focus-visible::after{width:100%;}
   display:flex; align-items:center; justify-content:center; text-align:center;
   font-family:var(--font-title); font-size:.6rem; color:var(--azul-marinho); padding:6px; text-transform:uppercase;
 }
+
+/* ============ VIDA RELIGIOSA ============ */
+.vida-religiosa{background:#fff;}
+.religiosa-grid{display:grid; grid-template-columns:1fr 1.1fr; gap:50px; align-items:center;}
+@media (max-width:900px){.religiosa-grid{grid-template-columns:1fr;}}
+.religiosa-photos{display:grid; grid-template-columns:1.3fr 1fr; gap:14px; height:360px;}
+@media (max-width:900px){.religiosa-photos{height:320px; max-width:460px; margin:0 auto;}}
+@media (max-width:480px){.religiosa-photos{grid-template-columns:1fr; height:auto;}}
+.rp-main{border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-soft);}
+.rp-main img{width:100%; height:100%; object-fit:cover; display:block;}
+@media (max-width:480px){.rp-main img{height:220px;}}
+.rp-side{border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-soft);}
+.rp-side img{width:100%; height:100%; object-fit:cover; display:block;}
+@media (max-width:480px){.rp-side img{height:170px;}}
 
 /* ============ ÚLTIMOS EVENTOS ============ */
 .eventos{background:#F7FAFD;}

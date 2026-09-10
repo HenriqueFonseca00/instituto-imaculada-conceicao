@@ -95,11 +95,17 @@
 
 <!-- ============ SOBRE / NOSSA HISTÓRIA ============ -->
 <section class="sobre section-pad" id="sobre">
-  <span class="sobre-watermark" aria-hidden="true">100+</span>
+  <span class="sobre-watermark" aria-hidden="true">+100</span>
   <div class="wrap sobre-grid">
     <div class="reveal">
-      <div class="sobre-photo reveal" style="border-radius:var(--radius-lg); overflow:hidden;">
-        <img src="assets/img/estrutura/inauguracao colegio 1920.png" alt="Foto histórica da inauguração do colégio em 1920" style="width:100%; height:100%; object-fit:cover;">
+      <div class="photo-deck-wrap">
+        <div class="photo-deck" id="historiaDeck">
+          <img src="assets/img/estrutura/inauguracao colegio 1920.png" class="deck-photo" alt="Foto histórica da inauguração do colégio em 1920">
+          <img src="assets/img/estrutura/irmas atuais colegio.png" class="deck-photo" alt="As Irmãs da congregação">
+          <img src="assets/img/estrutura/Professores em roda.png" class="deck-photo" alt="Professores em roda">
+          <img src="assets/img/estrutura/Quiosques-colegio.png" class="deck-photo" alt="Quiosques do colégio">
+          <img src="assets/img/estrutura/quadra aberta.png" class="deck-photo" alt="Quadra aberta">
+        </div>
       </div>
     </div>
     <div class="sobre-text reveal reveal-delay-1">
@@ -109,21 +115,13 @@
         <span class="c-vivo">história</span>
       </h2>
       <p>Fundado há <span class="keyword">mais de 100 anos</span>, o Instituto Imaculada Conceição nasceu do compromisso beneditino com a formação integral do ser humano. Ao longo de mais de um século, formamos gerações de itapetininguenses com <span class="keyword red">valores sólidos</span> e ensino de excelência.</p>
-      <p>Seguimos a tradição de <span class="keyword">São Bento</span>: ora et labora — oração e trabalho — como caminho para o equilíbrio entre corpo, mente e espírito.</p>
+      <p>Seguimos a tradição de <span class="keyword">São Bento</span>: ora et labora, oração e trabalho, como caminho para o equilíbrio entre corpo, mente e espírito.</p>
       <div class="valores">
         <span class="valor-pill">Fé</span>
         <span class="valor-pill red">Disciplina</span>
         <span class="valor-pill gold">Amor ao próximo</span>
       </div>
-      <p class="script-tag" style="display:block; margin-top:24px;">Educação que Transforma</p>
-    </div>
-  </div>
-  <div class="wrap reveal reveal-delay-2" style="margin-top:56px; position:relative; z-index:1;">
-    <div style="display:flex; gap:18px; flex-wrap:wrap; justify-content:center;">
-      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(-2deg);"><img src="assets/img/estrutura/irmas atuais colegio.png" alt="As Irmãs da congregação" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
-      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(1.5deg);"><img src="assets/img/estrutura/Professores em roda.png" alt="Professores em roda" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
-      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(-1deg);"><img src="assets/img/estrutura/Quiosques-colegio.png" alt="Quiosques do colégio" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
-      <div style="width:150px; border-radius:14px; overflow:hidden; box-shadow:var(--shadow-soft); transform:rotate(2deg);"><img src="assets/img/estrutura/quadra aberta.png" alt="Quadra aberta" style="width:100%; height:160px; object-fit:cover; display:block;"></div>
+      <p class="script-tag script-tag-lg" style="display:block; margin-top:24px;">Educação que Transforma</p>
     </div>
   </div>
 </section>
@@ -313,14 +311,35 @@
 
 <!-- ============ MEDALHÃO SÃO BENTO ============ -->
 <section class="section-pad" style="background:#F7FAFD;">
-  <div class="wrap" style="display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
+  <div class="wrap" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:28px; max-width:640px;">
     <div class="reveal" style="width:180px; height:180px; border-radius:50%; flex-shrink:0; overflow:hidden;">
       <img src="assets/img/marca/Medalha-Sao-Bento-Colorida.svg" alt="Medalhão de São Bento" style="width:100%; height:100%; object-fit:cover;">
     </div>
-    <div class="reveal reveal-delay-1" style="flex:1; min-width:260px;">
+    <div class="reveal reveal-delay-1">
       <span class="eyebrow">tradição que atravessa gerações</span>
       <h2 class="sticker-title" style="font-size:clamp(1.7rem,3.4vw,2.5rem);"><span class="c-grafite">Ensinando valores</span><span class="c-marinho">para a vida</span></h2>
-      <p style="margin-top:14px; max-width:560px;">O medalhão de São Bento é símbolo de proteção e sabedoria — presente em nossa história e nos valores que ensinamos todos os dias dentro e fora da sala de aula.</p>
+      <p style="margin-top:14px;">O medalhão de São Bento é símbolo de proteção e sabedoria — presente em nossa história e nos valores que ensinamos todos os dias dentro e fora da sala de aula.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDA RELIGIOSA ============ -->
+<section class="vida-religiosa section-pad" id="vida-religiosa">
+  <div class="wrap religiosa-grid">
+    <div class="reveal">
+      <div class="religiosa-photos">
+        <div class="rp-main"><img src="assets/img/estrutura/capela colegio.png" alt="Capela do colégio"></div>
+        <div class="rp-side"><img src="assets/img/estrutura/Fachada atual - casa irmas.png" alt="Fachada da casa das Irmãs"></div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <span class="eyebrow">fé que inspira o dia a dia</span>
+      <h2 class="sticker-title">
+        <span class="c-marinho">Vida</span>
+        <span class="c-vermelho">religiosa</span>
+      </h2>
+      <p style="margin-top:14px;">As Irmãs da Congregação estão presentes na vida escolar todos os dias — na oração da manhã, no acompanhamento pedagógico e no exemplo de vida dedicada ao próximo. Mais do que uma tradição, a vida religiosa é parte viva do Instituto: orienta valores, inspira projetos sociais e fortalece o vínculo entre fé e conhecimento.</p>
+      <p style="margin-top:14px;">A capela do colégio é espaço de encontro e reflexão, aberta a alunos, famílias e educadores. Momentos de oração, celebrações e retiros fazem parte do calendário escolar, reforçando o compromisso com a formação integral — mente, corpo e espírito.</p>
     </div>
   </div>
 </section>

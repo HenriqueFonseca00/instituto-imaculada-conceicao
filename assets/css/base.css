@@ -76,6 +76,7 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   color:var(--azul-marinho);
 }
 .script-tag.red{color:var(--vermelho);}
+.script-tag-lg{font-size:2.3rem;}
 
 .keyword{color:var(--azul-marinho); font-weight:800;}
 .keyword.red{color:var(--vermelho);}
